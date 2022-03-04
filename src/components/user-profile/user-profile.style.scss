@@ -1,0 +1,11 @@
+@import '../../styles/index.scss';
+
+.user-profile {
+  @include header-nav;
+
+  &__icons {
+    &.active {
+      color: var(--green-color-1);
+    }
+  }
+}

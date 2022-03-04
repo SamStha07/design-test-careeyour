@@ -1,0 +1,16 @@
+:root {
+  --grey-color-1: #dadee2;
+  --grey-color-2: #6b7280;
+  --grey-color-3: #18191f;
+  --grey-color-4: #9699a8;
+
+  --white-color: #ffffff;
+
+  --black-color-1: #111111;
+  --black-color-2: #111827;
+  --black-color-3: #374151;
+
+  --green-color-1: #139729;
+
+  --transition: 250ms;
+}

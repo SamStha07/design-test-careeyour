@@ -1,0 +1,16 @@
+.popper-menu {
+  padding: 0;
+  z-index: 999;
+}
+
+.popper-menu.profile {
+  margin-top: 2.5rem;
+  background-color: transparent;
+}
+
+.paper {
+  background: #ffffff;
+  border: 1px solid rgba(22, 28, 45, 0.08);
+  box-shadow: 0px 1px 16px 3px rgba(50, 50, 71, 0.08);
+  border-radius: 5px;
+}

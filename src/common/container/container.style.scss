@@ -1,0 +1,10 @@
+@import '../../styles/index.scss';
+
+.container {
+  max-width: 124rem;
+  margin: auto;
+
+  @include customMaxBreakPoint(1300) {
+    padding: 0 5%;
+  }
+}

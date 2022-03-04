@@ -1,0 +1,15 @@
+@import '../../styles/index.scss';
+
+.logo {
+  h3 {
+    color: var(--green-color-1);
+    cursor: pointer;
+    font-size: 2.8rem;
+  }
+
+  @include customMaxBreakPoint(768) {
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@mixin customMaxBreakPoint($size) {
+  @media screen and (max-width: $size+'px') {
+    @content;
+  }
+}
+
+@mixin header-nav {
+  color: var(--grey-color-2);
+  transition: var(--transition);
+
+  &:hover {
+    color: var(--green-color-1);
+  }
+}

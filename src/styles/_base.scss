@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&family=Great+Vibes&family=Inter:wght@100;300&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //this defines what 1rem is
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--grey-color-1);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,61 @@
+@import '../../styles/index.scss';
+
+@mixin flex($gap, $align-items: center) {
+  display: flex;
+  gap: $gap;
+  align-items: $align-items;
+  flex-wrap: nowrap;
+}
+
+.nav {
+  @include flex(2rem);
+  height: 8rem;
+  justify-content: space-between;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    font-size: 1.3rem;
+    color: var(--grey-color-2);
+    text-transform: capitalize;
+    font-weight: bold;
+    transition: var(--transition);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--green-color-1);
+    }
+  }
+
+  svg {
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  &__left {
+    &--list {
+      @include flex(2rem, flex-end);
+
+      @include customMaxBreakPoint(768) {
+        @include flex(2rem, center);
+      }
+
+      > li {
+        padding-bottom: 0.6rem;
+      }
+    }
+  }
+
+  &__right {
+    font-size: 2rem;
+    &--list {
+      @include flex(2.5rem);
+
+      @include customMaxBreakPoint(500) {
+        @include flex(2rem);
+      }
+    }
+  }
+}

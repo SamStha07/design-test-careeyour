@@ -1,0 +1,57 @@
+@mixin flex($gap) {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+}
+
+.user-profile-hover {
+  &__userInfo {
+    @include flex(1.5rem);
+    padding: 2rem 3rem;
+
+    &--info {
+      p {
+        font-size: 1.8rem;
+      }
+
+      span {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__links {
+    padding: 2rem 3rem;
+    display: grid;
+    gap: 2rem;
+
+    &--item {
+      @include flex(2rem);
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: var(--transition);
+
+      svg {
+        color: var(--grey-color-2);
+      }
+      &:hover {
+        > span,
+        > svg {
+          color: var(--green-color-1);
+        }
+      }
+    }
+  }
+
+  &__signout {
+    padding: 2rem 3rem;
+    text-align: center;
+    cursor: pointer;
+    > span {
+      color: var(--green-color-1);
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+  }
+}
