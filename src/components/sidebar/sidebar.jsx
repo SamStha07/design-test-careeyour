@@ -2,7 +2,7 @@ import React from 'react';
 import './sidebar.style.scss';
 import { ImCross } from 'react-icons/im';
 
-const Sidebar = ({ show, handleToggle }) => {
+const Sidebar = ({ handleToggle }) => {
   return (
     <div className='sidebar'>
       <ul>

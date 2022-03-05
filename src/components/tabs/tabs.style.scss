@@ -1,0 +1,83 @@
+@import '../../styles/index.scss';
+
+.tabs {
+  background-color: var(--white-color);
+  width: 25%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 0.6rem;
+  position: fixed;
+  transition: var(--transition);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10rem;
+  max-height: 60rem;
+
+  > h4 {
+    padding: 1rem 2rem;
+  }
+  > ul {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+
+    li {
+      font-size: 1.6rem;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      align-items: center;
+      padding: 1rem 2rem;
+
+      &.active {
+        border-left: 4px solid var(--green-color-1);
+
+        svg {
+          margin-left: -4px;
+        }
+        svg,
+        span {
+          color: var(--green-color-1);
+        }
+      }
+
+      svg {
+        font-size: 1.6rem;
+        color: var(--grey-color-2);
+      }
+
+      span {
+        text-transform: capitalize;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        svg,
+        span {
+          color: var(--green-color-1);
+        }
+      }
+    }
+  }
+
+  @include customMaxBreakPoint(1020) {
+    width: 8rem;
+    h4 {
+      display: none;
+    }
+
+    ul {
+      li {
+        justify-content: center;
+        svg {
+          font-size: 1.8rem;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

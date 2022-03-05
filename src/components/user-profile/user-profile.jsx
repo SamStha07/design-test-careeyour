@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { FaUserAlt } from 'react-icons/fa';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
-import MenuDropdown from '../../common/MenuDropdown';
+import { MenuDropdown } from '../../common';
 import { useToggle } from '../../hooks';
 import { UserProfileHover } from '../user-profile-hover';
 import './user-profile.style.scss';

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
-import Container from '../../common/container';
+import { Sidebar } from '..';
+import { Container } from '../../common';
 import { useToggle } from '../../hooks';
 import Navbar from '../navbar';
-import Sidebar from '../Sidebar';
-import './Header.style.scss';
+import './header.style.scss';
 
 const Header = () => {
   const { show, handleToggle } = useToggle(false);

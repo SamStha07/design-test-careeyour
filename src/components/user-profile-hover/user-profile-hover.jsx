@@ -1,7 +1,7 @@
 import React from 'react';
-import { Avatar } from '../../common/avatar';
-import { Divider } from '../../common/divider';
-import userInfoLinks from './profile-hover-data';
+import { Link } from 'react-router-dom';
+import { Avatar, Divider } from '../../common';
+import { ProfileData } from '../../data';
 import './user-profile-hover.style.scss';
 
 const UserProfileHover = ({ handleClose }) => {
@@ -16,15 +16,16 @@ const UserProfileHover = ({ handleClose }) => {
       </div>
       <Divider />
       <div className='user-profile-hover__links'>
-        {userInfoLinks.map((link) => (
-          <div
-            className='user-profile-hover__links--item'
-            onClick={() => handleClose(false)}
-            key={link.id}
-          >
-            {link.icon}
-            <span>{link.title}</span>
-          </div>
+        {ProfileData.map((link) => (
+          <Link to={`${link.link}`} key={link.id}>
+            <div
+              className='user-profile-hover__links--item'
+              onClick={() => handleClose(false)}
+            >
+              {link.icon}
+              <span>{link.title}</span>
+            </div>
+          </Link>
         ))}
       </div>
       <Divider />
